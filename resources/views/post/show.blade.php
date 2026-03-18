@@ -1,7 +1,12 @@
-<x-layout>
-    <x-slot:title>
-        page title
-        </x-slot>
+<!DOCTYPE html>
+<html>
 
-        page content
-</x-layout>
+<head>
+    <title>{{ $title }}</title>
+</head>
+
+<body>
+    {{ $slot }}
+</body>
+
+</html>

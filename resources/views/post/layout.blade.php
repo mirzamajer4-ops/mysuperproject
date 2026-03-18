@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html>
+<x-show>
+	<x-slot:title>
+		page title
+		</x-slot>
 
-<head>
-	<title>{{ $title }}</title>
-</head>
-
-<body>
-	{{ $slot }}
-</body>
-
-</html>
+		page content
+</x-show>

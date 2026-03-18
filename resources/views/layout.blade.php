@@ -6,7 +6,7 @@
 </head>
 
 <body>
-	{{ $text }}
+	{{ $slot }}
 </body>
 
 </html>
