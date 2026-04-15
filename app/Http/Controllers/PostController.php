@@ -1,16 +1,17 @@
 <?php
-	namespace App\Http\Controllers;
-	use Illuminate\Support\Facades\DB; // подключаем фасад DB
-	
-	class PostController extends Controller
+
+namespace App\Http\Controllers;
+
+use Illuminate\Support\Facades\DB; // подключаем фасад DB
+
+class PostController extends Controller
+{
+	public function show()
 	{
-		public function show()
-		{
-            $users = DB::table('users')->get();
-            dump($posts);
-			
-		}
+		$posts = DB::table('posts')
+			->take(5)
+			->get();
+
+		dump($posts);
 	}
-?>
-
-
+}
