@@ -5,9 +5,6 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\PostController;
 
-Route::get('/', function () {
-	return '!!!';
+Route::get('/about', function (post.show) {
+   return view('test', ['arr' => [1, 2]]);
 });
-
-Route::get('/user', action: [PostController::class, 'show']);
-Route::get('/user1', action: [PostController::class,]);
