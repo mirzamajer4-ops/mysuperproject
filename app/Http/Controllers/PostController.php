@@ -6,15 +6,22 @@ use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 
 class PostController extends Controller
+{
+	public function show()
 	{
-		public function show()
-		{
-			$posts = DB::table('users')->get();
-			
-			foreach ( $users as $user){
-				dump($user);
-			}
-		}
+		DB::table('posts')->insert([
+			[
+				'title' => 'page1',
+				'slug' => 'slug1',
+			],
+			[
+				'title' => 'page2',
+				'slug' => 'slug2',
+			]
+		]);
+
 	}
+}
+
 
 
