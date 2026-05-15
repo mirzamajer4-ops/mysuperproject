@@ -2,26 +2,26 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\DB;
+use App\Models\Posts;
+
 use App\Http\Controllers\Controller;
 
 class PostController extends Controller
 {
-	public function show()
+	public function index()
 	{
-		DB::table('posts')->insert([
-			[
-				'title' => 'page1',
-				'slug' => 'slug1',
-			],
-			[
-				'title' => 'page2',
-				'slug' => 'slug2',
-			]
-		]);
+		 $posts = Posts::all();
 
+			foreach ($posts as $text) 
+    {
+  				echo $text;}
+		
 	}
-}
+}	
+   
+
+	
+
 
 
 
